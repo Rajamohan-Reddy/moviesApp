@@ -1,0 +1,84 @@
+.home-poster-bg-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 447px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+
+.overview {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+
+.play-btn {
+  border: none;
+  outline: none;
+  height: 32px;
+  width: 76px;
+  font-family: 'Roboto';
+  border-radius: 3px;
+}
+
+.poster-loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d0d0d;
+  border-radius: 4px;
+  height: 213px;
+  margin-bottom: 30px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+.poster-header-container {
+  margin-bottom: 30px;
+}
+
+.homeposter-details {
+  width: 80%;
+  margin: auto;
+}
+
+@media all and (min-width: 768px) {
+  .home-poster-bg-container {
+    min-height: 700px;
+  }
+
+  .poster-loader-container {
+    height: 466px;
+  }
+
+  .homeposter-details-container {
+    width: 50%;
+  }
+
+  .title {
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  .overview {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .play-btn {
+    height: 40px;
+    width: 74px;
+  }
+}

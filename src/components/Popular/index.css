@@ -1,0 +1,79 @@
+.popular-bg-container {
+  background-color: #181818;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.popular-list-container {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popular-header-container {
+  margin-bottom: 50px;
+}
+
+.popular-sub-container {
+  width: 80%;
+  margin: auto;
+}
+
+.popular-loader-container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.failure-view-description {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+
+.try-btn {
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  height: 28px;
+  width: 77px;
+  border-radius: 3px;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 600;
+}
+.popular-failure-img{
+  height: 172px;
+  width: 233px;
+}
+
+@media all and (min-width: 768px) {
+  .popular-list-container {
+    justify-content: flex-start;
+  }
+
+  .popular-loader-container{
+    min-height: 80vh;
+  }
+
+  .popular-failure-img{
+  height: 276px;
+  width: 375px;
+}
+
+  .failure-view-description {
+    font-size: 14px;
+  }
+
+  .try-btn {
+    height: 32px;
+    width: 94px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,53 @@
+.not-found-bg-container {
+  background-image: url('https://res.cloudinary.com/dchkvmpzf/image/upload/v1732974199/ymzpdnfujbn8poultak2.png');
+  background-size: cover;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.not-found-heading {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-family: 'Roboto';
+}
+
+.not-found-description {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  font-family: 'Roboto';
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.go-home-btn {
+  height: 40px;
+  width: 127px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Roboto';
+}
+
+@media all and (min-width: 768px) {
+  .not-found-heading {
+    font-size: 96px;
+  }
+
+  .not-found-description {
+    font-size: 24px;
+  }
+
+  .go-home-btn {
+    height: 48px;
+  }
+}

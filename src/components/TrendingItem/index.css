@@ -1,0 +1,25 @@
+.slider-item {
+  margin-left: 6px;
+}
+
+.slider-link-item {
+  text-decoration: none;
+}
+
+.slider-img {
+  height: 64px;
+  width: 90px;
+  border-radius: 8px;
+}
+
+@media all and (min-width: 768px) {
+  .slider-item {
+    margin-left: 24px;
+  }
+
+  .slider-img {
+    height: 170px;
+    width: 254px;
+    border-radius: 8px;
+  }
+}

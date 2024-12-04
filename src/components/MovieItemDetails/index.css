@@ -1,0 +1,125 @@
+.movie-item-details-container {
+  background-color: #131313;
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.movie-details-bg-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 447px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.duration-censor-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.censor-container {
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  outline: none;
+  height: 25px;
+  width: 51px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.duration {
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Roboto';
+  color: #ffffff;
+}
+
+.movie-items-poster-details-container {
+  margin-left: 30px;
+}
+
+.genres-list-container {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.details-heading {
+  color: #64748b;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.details-paragraph {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.details-main-conatiner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.similar-movies-list-container {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.more-like-this-container {
+  width: 80%;
+  margin: auto;
+}
+
+.more-like-this-heading{
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+@media all and (min-width: 768px) {
+  .movie-details-bg-container {
+    min-height: 700px;
+  }
+
+  .duration {
+    font-size: 18px;
+  }
+
+  .censor-container {
+    height: 27px;
+    width: 55px;
+  }
+
+  .details-heading {
+    color: #94a3b8;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .details-paragraph {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .more-like-this-heading{
+    font-size: 24px;
+  }
+}

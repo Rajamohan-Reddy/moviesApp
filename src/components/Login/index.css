@@ -1,0 +1,127 @@
+.login-page-bg-container {
+  min-height: 100vh;
+  background-color: #131313;
+  background-size: cover;
+  padding: 30px;
+}
+
+.website-logo {
+  width: 100px;
+  height: 27px;
+  top: 32px;
+  left: 32px;
+  padding: 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.login-form-container {
+  height: 80vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+.login-heading {
+  color: #ffffff;
+  font-size: 32px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+
+.label-input {
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.text-input {
+  margin-top: 6px;
+  width: 296px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #e2e8f0;
+  background-color: #333333;
+  padding-left: 10px;
+}
+
+.sigin-btn {
+  background-color: #e50915;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  height: 40px;
+  width: 296px;
+}
+
+.login-btn {
+  display: none;
+  background-color: #e50915;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  height: 40px;
+  width: 296px;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Roboto';
+}
+
+@media all and (min-width: 768px) {
+  .login-page-bg-container {
+    background-image: url('https://res.cloudinary.com/dchkvmpzf/image/upload/v1732332308/cgatzqf3otut9dshzjnb.png');
+  }
+
+  .login-form-container {
+    align-items: center;
+  }
+
+  .form-container {
+    background-color: #0c0b10a8;
+    padding: 30px;
+  }
+
+  .website-logo{
+    height: 52px;
+    width: 180px;
+  }
+
+  .login-heading {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .text-input {
+    width: 360px;
+  }
+
+  .login-btn {
+    display: inline;
+    width: 360px;
+  }
+
+  .sigin-btn {
+    display: none;
+  }
+}

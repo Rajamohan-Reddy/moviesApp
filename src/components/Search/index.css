@@ -1,0 +1,26 @@
+.search-bg-container {
+  background-color: #131313;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.searched-movies-container {
+  width: 80%;
+  margin: auto;
+}
+
+.searched-movies-list-container {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+@media all and (min-width: 768px) {
+  .searched-movies-list-container {
+    justify-content: flex-start;
+  }
+}
