@@ -2,7 +2,6 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 import Slider from 'react-slick'
 import Loader from 'react-loader-spinner'
-import {RiAlertFill} from 'react-icons/ri'
 
 import OriginalItem from '../OriginalItem'
 
@@ -107,7 +106,11 @@ class Originals extends Component {
 
   renderFailureView = () => (
     <div className="loader-container">
-      <RiAlertFill className="alert-triangle" color="#d81f26" />
+      <img
+        src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1733392458/zlulsadjqvzxo18heavm.png"
+        className="alert-triangle"
+        alt="failure view"
+      />
       <p className="failure-view-description">
         Something went wrong. Please try again
       </p>

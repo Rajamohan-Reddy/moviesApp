@@ -2,12 +2,15 @@ import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import {HiOutlineSearch} from 'react-icons/hi'
 import {MdCancel} from 'react-icons/md'
-import Popup from 'reactjs-popup'
 
 import './index.css'
 
 class Header extends Component {
-  state = {showSearchBar: false, searchInput: ''}
+  state = {showSearchBar: false, searchInput: '', showRouteBar: false}
+
+  changeShowRouteBar = () => {
+    this.setState(prevState => ({showRouteBar: !prevState.showRouteBar}))
+  }
 
   changeSearchInput = event => {
     this.setState({searchInput: event.target.value})
@@ -26,90 +29,87 @@ class Header extends Component {
   }
 
   renderSmallContainer = () => {
-    const {showSearchBar} = this.state
+    const {showSearchBar, showRouteBar} = this.state
 
     return (
-      <nav className="nav-sm-container">
-        <div className="navbar-container">
-          <img
-            src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732333945/atkhwjk2xo3odvogc9uz.png"
-            alt="website logo"
-            className="header-logo"
-          />
-          <div className="search-hamberger-container">
-            {showSearchBar ? (
-              <div className="search-input-container">
-                <input
-                  type="search"
-                  className="search-input"
-                  placeholder="Search"
-                  onChange={this.changeSearchInput}
-                  onKeyDown={this.clickEnter}
-                />
-                <div className="search-icon-container">
-                  <Link to="/search">
-                    <HiOutlineSearch
-                      className="input-search-icon"
-                      onClick={this.clickSearchBtn}
-                    />
-                  </Link>
-                </div>
-              </div>
-            ) : (
-              <HiOutlineSearch
-                className="search-icon"
-                onClick={this.clickSearchBtn}
-              />
-            )}
-          </div>
-          <div>
-            <Popup
-              arrow={false}
-              trigger={
-                <button type="button" className="popup-btn">
-                  <img
-                    src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732860590/tloszozzh8ptnxjqsyi8.svg"
-                    alt="hamberger icon"
-                    className="popup-img"
+      <>
+        <nav className="nav-sm-container">
+          <div className="navbar-container">
+            <img
+              src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732333945/atkhwjk2xo3odvogc9uz.png"
+              alt="website logo"
+              className="header-logo"
+            />
+            <div className="search-hamberger-container">
+              {showSearchBar ? (
+                <div className="search-input-container">
+                  <input
+                    type="search"
+                    className="search-input"
+                    placeholder="Search"
+                    onChange={this.changeSearchInput}
+                    onKeyDown={this.clickEnter}
                   />
-                </button>
-              }
-              position="bottom right"
-            >
-              {close => (
-                <div className="popup-outer-container">
-                  <div className="popup-inner-container">
-                    <ul className="header-list-container">
-                      <li>
-                        <Link to="/" className="header-link-item">
-                          Home
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/popular" className="header-link-item">
-                          Popular
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/account" className="header-link-item">
-                          Account
-                        </Link>
-                      </li>
-                    </ul>
-                    <button
-                      type="button"
-                      onClick={() => close()}
-                      className="close-btn"
-                    >
-                      <MdCancel size={24} className="close-icon" />
-                    </button>
+                  <div className="search-icon-container">
+                    <Link to="/search">
+                      <HiOutlineSearch
+                        className="input-search-icon"
+                        onClick={this.clickSearchBtn}
+                      />
+                    </Link>
                   </div>
                 </div>
+              ) : (
+                <HiOutlineSearch
+                  className="search-icon"
+                  onClick={this.clickSearchBtn}
+                />
               )}
-            </Popup>
+            </div>
+            <div>
+              <button
+                type="button"
+                className="popup-btn"
+                onClick={this.changeShowRouteBar}
+              >
+                <img
+                  src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732860590/tloszozzh8ptnxjqsyi8.svg"
+                  alt="hamberger icon"
+                  className="popup-img"
+                />
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+        {showRouteBar && (
+          <div className="routes-container">
+            <ul className="header-list-container">
+              <li>
+                <Link to="/" className="header-link-item">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/popular" className="header-link-item">
+                  Popular
+                </Link>
+              </li>
+              <li>
+                <Link to="/account" className="header-link-item">
+                  Account
+                </Link>
+              </li>
+            </ul>
+            <button
+              type="button"
+              className="close-btn"
+              onClick={this.changeShowRouteBar}
+            >
+              <MdCancel size={24} className="close-icon" />
+            </button>
+          </div>
+        )}
+      </>
     )
   }
 
@@ -118,11 +118,13 @@ class Header extends Component {
     return (
       <nav className="nav-lg-container">
         <div className="navbar-container">
-          <img
-            src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732333945/atkhwjk2xo3odvogc9uz.png"
-            alt="website logo"
-            className="header-logo"
-          />
+          <Link to="/">
+            <img
+              src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732333945/atkhwjk2xo3odvogc9uz.png"
+              alt="website logo"
+              className="header-logo"
+            />
+          </Link>
           <ul className="header-list-container">
             <li>
               <Link to="/" className="header-link-item">
@@ -146,18 +148,24 @@ class Header extends Component {
                   onKeyDown={this.clickEnter}
                 />
                 <div className="search-icon-container">
-                  <HiOutlineSearch
-                    className="input-search-icon"
+                  <button
+                    data-testid="serachButton"
                     onClick={this.clickSearchBtn}
-                  />
+                    className="search-btn"
+                  >
+                    <HiOutlineSearch className="input-search-icon" />
+                  </button>
                 </div>
               </div>
             ) : (
               <Link to="/search">
-                <HiOutlineSearch
-                  className="search-icon"
+                <button
+                  data-testid="serachButton"
                   onClick={this.clickSearchBtn}
-                />
+                  className="search-btn"
+                >
+                  <HiOutlineSearch className="search-icon" />
+                </button>
               </Link>
             )}
           </div>

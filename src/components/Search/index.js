@@ -91,7 +91,7 @@ class Search extends Component {
         <div className="popular-loader-container" data-testid="loader">
           <img
             src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732960180/flejgme1j9afcjvxxvki.png"
-            alt="failure view"
+            alt="no movies"
             className="popular-failure-img"
           />
           <p className="failure-view-description">{noViewDescription}</p>

@@ -38,6 +38,11 @@
   font-family: 'Roboto';
 }
 
+.go-home-link-item{
+  text-decoration: none;
+  outline: none;
+}
+
 @media all and (min-width: 768px) {
   .not-found-heading {
     font-size: 96px;

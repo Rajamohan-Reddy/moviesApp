@@ -48,7 +48,7 @@
   font-size: 12px;
   font-weight: 600;
 }
-.popular-failure-img{
+.popular-failure-img {
   height: 172px;
   width: 233px;
 }
@@ -58,14 +58,14 @@
     justify-content: flex-start;
   }
 
-  .popular-loader-container{
+  .popular-loader-container {
     min-height: 80vh;
   }
 
-  .popular-failure-img{
-  height: 276px;
-  width: 375px;
-}
+  .popular-failure-img {
+    height: 276px;
+    width: 375px;
+  }
 
   .failure-view-description {
     font-size: 14px;

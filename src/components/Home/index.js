@@ -1,3 +1,4 @@
+import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import HomePoster from '../HomePoster'
 import TrendingNow from '../TrendingNow'
 import Originals from '../Originals'

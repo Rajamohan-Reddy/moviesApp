@@ -123,6 +123,24 @@
   margin-right: 15px;
 }
 
+.close-icon {
+  color: #ffffff;
+}
+
+.routes-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 @media all and (min-width: 768px) {
   .nav-sm-container {
     display: none;

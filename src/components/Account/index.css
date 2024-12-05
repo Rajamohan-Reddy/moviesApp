@@ -79,30 +79,28 @@
   border: none;
 }
 
-
-
-@media all and (min-width : 768px){
-  .account-heading{
+@media all and (min-width: 768px) {
+  .account-heading {
     font-size: 36px;
     font-weight: 700;
   }
 
-  .membership-heading{
+  .membership-heading {
     font-size: 24px;
     font-weight: 600;
   }
 
-  .user-mail{
+  .user-mail {
     font-size: 24px;
     font-weight: 400;
   }
 
-  .password{
+  .password {
     font-size: 24px;
     font-weight: 400;
   }
 
-  .ultra-container{
+  .ultra-container {
     height: 50px;
     width: 120px;
   }

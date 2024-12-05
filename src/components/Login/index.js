@@ -95,10 +95,10 @@ class Login extends Component {
         {this.renderUsername()}
         {this.renderPassword()}
         <button type="submit" className="sigin-btn">
-          Sign in
+          Signin
         </button>
         <button type="submit" className="login-btn">
-          Log in
+          Login
         </button>
       </form>
     </div>
@@ -114,7 +114,7 @@ class Login extends Component {
       <div className="login-page-bg-container">
         <img
           src="https://res.cloudinary.com/dchkvmpzf/image/upload/v1732333945/atkhwjk2xo3odvogc9uz.png"
-          alt="website logo"
+          alt="login website logo"
           className="website-logo"
         />
         <div className="login-form-container">{this.renderForm()}</div>

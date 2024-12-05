@@ -24,7 +24,7 @@ const Account = props => {
         <h1 className="account-heading">Account</h1>
         <hr className="hr-line" />
         <div className="member-container">
-          <h1 className="membership-heading">Member ship</h1>
+          <p className="membership-heading">Member ship</p>
           <div className="password-container">
             <p className="user-mail">{usermail}</p>
             <p className="password">Password : {hiddenPassword}</p>
@@ -32,7 +32,7 @@ const Account = props => {
         </div>
         <hr className="hr-line" />
         <div className="premium-container">
-          <h1 className="membership-heading">Plan Details</h1>
+          <p className="membership-heading">Plan details</p>
           <p className="user-mail">Premium</p>
           <div className="ultra-container">
             <p className="user-mail">Ultra HD</p>

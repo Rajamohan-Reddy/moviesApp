@@ -104,12 +104,8 @@ class MovieItemDetails extends Component {
   }
 
   renderSuccessView = () => {
-    const {
-      movieObject,
-      genresList,
-      languagesList,
-      similarMoviesList,
-    } = this.state
+    const {movieObject, genresList, languagesList, similarMoviesList} =
+      this.state
     const {
       backdropPath,
       title,
@@ -186,23 +182,23 @@ class MovieItemDetails extends Component {
         <div className="details-main-conatiner">
           <div>
             <h1 className="details-heading">Genres</h1>
-            <ul className="genres-list-container">
+            <div>
               {genresList.map(eachItem => (
-                <li key={eachItem.id} className="details-paragraph">
+                <p key={eachItem.id} className="details-paragraph">
                   {eachItem.name}
-                </li>
+                </p>
               ))}
-            </ul>
+            </div>
           </div>
           <div>
             <h1 className="details-heading">Audio Available</h1>
-            <ul className="genres-list-container">
+            <div>
               {languagesList.map(eachItem => (
-                <li key={eachItem.id} className="details-paragraph">
+                <p key={eachItem.id} className="details-paragraph">
                   {eachItem.englishName}
-                </li>
+                </p>
               ))}
-            </ul>
+            </div>
           </div>
           <div>
             <h1 className="details-heading">Rating Count</h1>
